@@ -12,13 +12,20 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     flexShrink: 1,
   },
+  appBarContainer: {
+    flexDirection: 'row',
+  },
 });
 
 const Main = () => {
   return (
     <View style={styles.container}>
-      <AppBar title="Repositories"/>
-
+      <View style={styles.appBarContainer}>
+        <AppBar title="Repositories"/>
+        <AppBar title="Sign in"/>
+        
+      </View>
+      
       <Routes>
         <Route path="/" element={<RepositoryList />} />
         <Route path="*" element={<Navigate to="/" replace />} />

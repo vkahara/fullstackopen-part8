@@ -12,15 +12,17 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
     backgroundColor: theme.colors.appBarBackground,
     height: 80,
-    // ...
+
   },
   text: {
     color: theme.colors.appBarText,
   }
 });
 
+//each app bar has flexGrow 1 so they share the space equally  
 const AppBar = (props) => {
   return <Pressable
+  style={{ flexGrow: 1 }}
   onPress={() => Alert.alert('App Bar pressed')}>
     <View style={styles.container}><Subheading style={styles.text}>{props.title}</Subheading></View>
     </Pressable>;
