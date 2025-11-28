@@ -4,6 +4,9 @@ const theme = {
     textSecondary: '#586069',
     primary: '#f09ecbff',
     appBarText: '#ffffff',
+    appBarBackground: '#f75da5ff',
+    mainBackground: '#fabff7ff',
+    repositoryItemBackground: '#ffffff',
   },
   fontSizes: {
     body: 14,

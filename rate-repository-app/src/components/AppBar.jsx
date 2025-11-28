@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingTop: Constants.statusBarHeight,
     paddingLeft: 10,
-    backgroundColor: theme.colors.primary,
+    backgroundColor: theme.colors.appBarBackground,
     height: 80,
     // ...
   },
