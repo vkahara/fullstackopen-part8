@@ -1,4 +1,4 @@
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Pressable, Alert } from 'react-native';
 import Constants from 'expo-constants';
 import theme from '../theme';
 import Subheading from './Subheading';
@@ -20,7 +20,10 @@ const styles = StyleSheet.create({
 });
 
 const AppBar = (props) => {
-  return <View style={styles.container}><Subheading style={styles.text}>{props.title}</Subheading></View>;
+  return <Pressable
+  onPress={() => Alert.alert('App Bar pressed')}>
+    <View style={styles.container}><Subheading style={styles.text}>{props.title}</Subheading></View>
+    </Pressable>;
 };
 
 export default AppBar;
