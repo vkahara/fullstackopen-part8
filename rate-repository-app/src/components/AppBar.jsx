@@ -2,6 +2,7 @@ import { View, StyleSheet, Pressable, Alert } from "react-native";
 import Constants from "expo-constants";
 import theme from "../theme";
 import Subheading from "./Subheading";
+import { Link } from "react-router-native";
 
 const styles = StyleSheet.create({
   container: {
@@ -22,13 +23,13 @@ const styles = StyleSheet.create({
 const AppBar = () => {
   return (
     <View style={styles.container}>
-      <Pressable onPress={() => Alert.alert("Repositories pressed")}>
+      <Link to='/'>
         <Subheading style={styles.text}>Repositories</Subheading>
-      </Pressable>
+      </Link>
 
-      <Pressable onPress={() => Alert.alert("Sign in pressed")}>
+      <Link to='/sign-in'>
         <Subheading style={styles.text}>Sign in</Subheading>
-      </Pressable>
+      </Link>
     </View>
   );
 };
